@@ -1,0 +1,34 @@
+h1{
+ font-style: "roboto";
+}
+ul{
+    text-align: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li{
+    float: right;
+}
+li a {display: block;
+ color: black;            
+  text-align: center;            
+   padding: 20px;             
+   text-decoration: none;           }                      
+   li a:hover { background-color: #111111;           
+}
+.S1{
+    display:inline-flex;
+}
+.P1{
+    font-style: "roboto";
+    width: 400px;
+    height: 120px;  
+}
+.Book{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
