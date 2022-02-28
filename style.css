@@ -1,34 +1,486 @@
-h1{
- font-style: "roboto";
-}
-ul{
-    text-align: right;
-    list-style-type: none;
+/*general styling*/
+*{
     margin: 0;
-    padding: 0;
-    overflow: hidden;
+    padding: 0;    
 }
-li{
-    float: right;
+
+/****navbar****/
+.navbar-style{
+    /*box-shadow: 0 5px 10px #f5e5e5;*/    
+    background-color: white;
 }
-li a {display: block;
- color: black;            
-  text-align: center;            
-   padding: 20px;             
-   text-decoration: none;           }                      
-   li a:hover { background-color: #111111;           
+.navbar-fixed{
+    display: flex; /*align the item in the nav tag*/
+    justify-content: space-between;
+    position: fixed; /* Sticky/fixed navbar */    
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */  
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99; 
+    background-color: hsla(0,0%,100%,.98);
+
+} 
+/* to move the triangle icons */
+.dropdown-toggle::after{
+    display: none;    
 }
-.S1{
-    display:inline-flex;
+.logo-docplanner{
+    width: 298px;
+    height: 63px;
+    margin-left: 80px;
 }
-.P1{
-    font-style: "roboto";
-    width: 400px;
-    height: 120px;  
+/*nav menu styling*/
+.navbar-menu{
+    margin-right: 100px;
 }
-.Book{
+.navbar-menu .nav .nav-link{
+    font: 15px Roboto, Arial, sans-serif;
+    color: #ababab;
+}
+.navbar-menu .nav .is-current {
+    color: #00b39b;
+}
+/*styling menu hover*/
+.navbar-menu .nav .nav-link:hover{
+    color: #00b39b;
+}
+
+/* dropdown */
+.dropdown{
+    cursor: pointer;
+    position: relative;
+}
+.dropdown-item{
+    font: 15px Roboto, Arial, sans-serif;
+    color: #ababab;    
+}
+.dropdown-menu{    
+    display: none;
+    padding-top: 16px;
+    position: absolute;
+    min-width: 220px;
+    margin-left: -100px;
+    background: #fff;
+    box-shadow: 0 5px 10px 0 #d3cfc9;
+    z-index: 1;
+}
+.dropdown-menu li{    
+    padding: 5px 10px;
+}
+/* the dropdown hover */
+.dropdown:hover .dropdown-menu{    
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+    border:0;
+    box-shadow: 0 5px 10px #f5e5e5;    
+}
+.dropdown-menu li a:hover{
+    color: #00b39b;
+}
+
+/******about us section1*****/
+.lead {
+    margin: 2.0625rem auto 3.75rem;
+    
+}
+
+/*about grid*/
+.about-grid{
+    display: grid; 
+    grid-template-columns: auto auto;    
+    grid-column-gap: 20px;
+    margin-bottom: 50px;
+}
+.col-2{
+    width: 100%;   
+}
+/*logo*/
+.lead__logo{
+    display: block;
+    margin: 100px auto 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+/*title*/
+.lead h1{
+    /*center*/
+    text-align: center;
+    /*color*/
+    color: #00b39b;
+    /*fonts*/
+    /* font-size: 2.125rem; */
+    /* font-family: Work Sans, sans-serif; */
+    font-family: 'Work Sans',Arial,sans-serif;
+    font-weight: 300;
+    /*space*/
+    margin: 1em 0;
+    letter-spacing: -.3px;
+}
+.lead p{
+    color: #747474;
+    font: 16px Roboto, Arial, sans-serif;
+    margin: 0.8em 0;
+    line-height: 1.75;
+    font-weight: 400;
+    font-size: medium;    
+}
+
+
+.section_inner{
+    zoom: 1;
+    max-width: 1015px;
+    padding: 0 20px;
+    margin: 0px auto;
+    position: relative;
+}
+
+/******section 2 services******/
+.services{   
+    display: flex;    
+    justify-content: space-between;
+    width: 100%;    
+}
+
+.services_item{
+    border-radius: 10px;
+    padding: 32px 32px 32px;
+    overflow: hidden;
+    height: 345px;
+    width: 300px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .2s ease 0s;
+}
+.services_item h1{
+    font-size: 1.625em;
+    font-weight: 400;
+    color: #fff;
+    margin: 0.3em 0;
+}
+
+.services_item h2{
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+    color: #fff;
+}
+
+.services_item_patients{
+    background-color: #00ccb1;
+}
+
+.services__item_doctors{
+    background-color: #508FE2;
+}
+.services__item_clinics{
+    background-color: #1B2734;
+}
+
+/*the dropdowns*/
+.style-select select{    
+    background: transparent;
+    border: 0;
+    border-radius: 0;    
+    text-transform: none;
+    text-decoration: underline;
+    cursor: pointer;
+
+    /* font & color */
+    color: #fff;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: .04em;
+    font-size: 1.2rem;    
+}
+.style-select select option{
+    color: black;
+}
+.style-select .style-select2{
+    padding-top: 20px;
+}
+.style-select{
+    padding-bottom: 10px;
+}
+
+
+/*******styling section 3 brands******/
+.brands{    
+    margin: 40px  auto  50px; 
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+.brands-h1{    
+    width: 350px;
+}
+.logos-list{    
+    width: 600px;
+}
+.brands-h1 h1{
+    float: left;
+    width: 90%;
+    font-size: 1.625em;    
+    margin: 0.25em 0 0.35em;
+    padding-right: 1em;
+    color: #00b39b;
+    font: 2.125rem "Work Sans", Arial, sans-serif; 
+    font-weight: 100;
+    letter-spacing: -.3px;     
+}
+.brands_logos{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    /*  */
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.brands_logos li{    
+    font-size: 1rem;   
+    margin-top: 20px;   
+    width: auto;
+}
+.brands_logos a svg{
+    height: 20px;
+    width: auto;
+    max-width: 100%;  
+}
+.brands_logos a path{    
+    fill: hsla(0, 0%, 67%, .7);
+}
+.brands_logos img{   
+    filter: invert(98%) sepia(2%) saturate(0) hue-rotate(180deg) brightness(300%) contrast(0);
+    -webkit-filter: invert(98%) sepia(2%) saturate(0) hue-rotate(180deg) brightness(300%) contrast(0);
+    opacity: .55;
+}
+.gipo img, .clinicloud img, .jameda img{
+    height: 36px;    
+}
+.tuotempo img{
+    height: 16px;
+}
+/*add the hover img & svg*/
+.brands_logos a path:hover{
+    fill: hsl(172, 100%, 38%);
+}
+.brands_logos img:hover{   
+    filter: none;
+    -webkit-filter: none;
+    opacity: .99;
+}
+
+/***** section 4 platform  ****/
+.platform-container{
+    /* border: 1px solid blue;     */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;       
+    background: #e5faf8;
+    background-image: linear-gradient(-45deg,rgba(0,204,177,.01) 5%,rgba(61,199,223,.1));
+    /* padding: 1.875em 0 0.625em; */
+    padding-top: 20px;
+    overflow: hidden;     
+    width: 100%;
+}
+
+.platform-container h3{    
+    color: #00b39b;
+    margin: 0.5em 0;
+    font-family: Work Sans,Arial,sans-serif;    
+    letter-spacing: -.3px;
+   
+}
+.platform-container p{
+    max-width: 415px;
+    font-size: .875em;
+    font-weight: 400;
+}
+
+
+/*left div of container platform*/
+.container-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;    
+}
+.container-left h1{
+    margin: 0;
+    font-size: 2.125rem;
+    color: #00b39b;
+    font-family: Work Sans,Arial,sans-serif;
+    font-weight: 300;
+    letter-spacing: -.3px;
+    text-align: center;
+}
+.container-left p{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.container-left img{
+    margin-top: 10px;
+}
+/*left div of container platform*/
+.container-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-left: 15px; */
+    margin-right: 35px; 
+}
+.left-cards, .right-cards{
+    display: flex;
+    flex-direction: column;    
+    margin-left: 20px;     
+}
+.right-cards{    
+    margin-right: 20px;    
+    margin-bottom: 25px;
+}
+.left-cards{
+    margin-top: 25px;
+}
+.left-card-1, .left-card-2, .right-card-3, .right-card-4{
+    /* border: 1px solid red; */
+    height: 240px;
+    width: 220px;
+    text-align: center;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 3%;
+    align-items: center;
+    padding: 5px;    
+}
+.container-right img{
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/***section 5***/
+.section-5{
+    margin: 80px 249.5px 67px;
+    text-align: center;
+}
+.section-5 h1{
+    font-size: 2.1428571429em;
+    color: #00b39b;
+    font-family: Work Sans,Arial,sans-serif;
+    font-weight: 300;
+    letter-spacing: -.3px;
+}
+.section-5 p{
+    line-height: 1.7142857143;
+    margin: 1.6em 0;
+}
+
+/******section 6******/
+.img-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 1px;
+}
+.cities{
+    display: flex; 
+    justify-content: space-between;   
+    border-radius: 2%;
+    background-color: white;    
+    margin: 2.5px;    
+}
+.office__image img{   
+    border-top-left-radius: 2.5%;
+    border-top-right-radius: 2.5%;
+    display: block;
+    margin: 0 auto;
+    width: 304.3px;
+    height: 273.95px;    
+}
+
+.cities a{    
+    text-decoration: none;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.6666666667;
+    padding: 1.1111111111em;
+    color: #5c5b5b;
+}
+.img-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 300;
+    color: #747474;
+    margin-left: 15px;
+    margin-right: 10px;    
+}
+/*  hover */
+.img-container .cities:hover{
+    box-shadow: 0 5px 10px #e0c9c9;
+}
+
+
+/******section7*****/
+.join-us{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    align-items: center;
+}
+.join-us h1{
+    font-size: 2.1428571429em;
+    color: #333;
+    margin-bottom: 0.75em;
+    font-family: Work Sans,Arial,sans-serif;
+    font-weight: 100;
+    letter-spacing: -.3px;    
+}
+.btn{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;    
+    border-radius: 4px;
+    padding: 1.1666666667em 1.5em;
+    background: #3d83df;
+    font-family: Roboto,Arial,sans-serif;
+    line-height: 1em;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .04em;
+    font-size: .75rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;   
+}
+
+.btn:hover{
+    color: #fff;
+    background: #1b67cc;
+}
+
+/****the footer****/
+footer{
+    font-size: 12px;
+    color: #ababab;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+footer p{
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: #3d83df;   
+}
+footer a:hover{
+    text-decoration: underline;
 }
