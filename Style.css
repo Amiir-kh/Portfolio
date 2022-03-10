@@ -1,0 +1,51 @@
+.Navbar{
+    display: flex;
+    background-color: rgb(247, 228, 144);
+    justify-content: space-between;
+}
+.ul{
+    display: flex;
+}
+li{
+    margin: 10px;
+    list-style: none;
+}
+.Section_1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.Section_2{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.Section_3{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.T{
+    border-radius: 75px;
+    margin-top: 30px; 
+}
+.B{
+    border-radius: 75px;
+    margin-top: 30px; 
+}
+.Q{
+    border-radius: 75px;
+    margin-top: 30px; 
+}
+a{
+    color: #00000030;
+}
+.btn-delete{
+    align-content: center;
+}
+.fa-heart{
+    color: gray;
+}
